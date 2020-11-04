@@ -5,24 +5,33 @@ let elOffSet = document.querySelector('#offset');
 let result = document.querySelector('#result');
 
 const encode = () => {
-    let message = elMessage.value.toUpperCase();
+    let message = elMessage.value;
     let valOffSet = elOffSet.value;
     let offSet = Number.parseInt(valOffSet);
-    let resultEncode = cipher.encode(offSet, message);
-    result.value = resultEncode;
+
+    let validateMsg = /^[a-zA-Z ]+$/;
+
+    if (!message.match(validateMsg)) {
+        alert('Mensagem inválida! Digite apenas texto');
+    }else{
+        let resultEncode = cipher.encodeOrDecode(offSet, message, 0);
+        result.value = resultEncode;
+    }
+
 }
 
 const decode = () => {
-    let message = elMessage.value.toUpperCase();
+    let message = elMessage.value;
     let valOffSet = elOffSet.value;
     let offSet = Number.parseInt(valOffSet);
-    let resultDecode = cipher.decode();
+    let resultDecode = cipher.encodeOrDecode(-offSet, message, 25);
     result.value = resultDecode;
 }
 
 const reset = () => {
     document.querySelector('#message').value = '';
     document.querySelector('#result').value = '';
+    document.querySelector('#offset').value = '';
 
 }
 

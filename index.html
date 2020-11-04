@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Cipher</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-  <header id="navbar">
-    <h1>Segura</h1>
+
+  <header id="header">
+    <div>
+      <h1>Segura</h1>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
   </header>
-    <section id="container">
-      <div class="container_info">
-        <div class="container_info--left">
-          <label class="container_label" for="">Digite a mensagem que você deseja codificar ou decodificar</label>
-          <textarea class="container_textarea" name="" id="message" placeholder="Digite sua mensagem"></textarea>
-        </div>
-        <div class="container_info--right">
-          <label class="container_label" for="">Resultado</label>
-          <textarea class="container_textarea" name="" id="result"></textarea>
-        </div>
+  <section id="container">
+    <div class="container_info">
+      <div class="container_info--left">
+        <label class="container_label" for="">Digite a mensagem que você deseja codificar ou decodificar</label>
+        <textarea class="container_textarea" name="" id="message" placeholder="Digite sua mensagem"></textarea>
       </div>
-      <label class="container_label" for="">Digite a chave de deslocamento</label>
-      <input type="number" name="" id="offset">
-      <div>
+      <div class="container_info--right">
+        <label class="container_label" for="">Resultado</label>
+        <textarea class="container_textarea" name="" id="result"></textarea>
+      </div>
+    </div>
+    <label class="container_label" for="">Digite a chave de deslocamento</label>
+    <input type="number" name="" id="offset">
+    <div>
       <button class="btn_container" type="submit" id="btnEncode">Cifrar</button>
       <button class="btn_container" type="submit" id="btnDecode">Decifrar</button>
       <button class="btn_container" type="reset" id="btnReset">Limpar</button>
     </div>
-    </section>
-    <p>&copy; <a href="https://github.com/lillabordignon/" target="_blank">Lirian Bordignon</a></p>
+  </section>
+  <footer>
+    <p class="copy">&copy; <a href="https://github.com/lillabordignon/" target="_blank">Lirian Bordignon</a></p>
+  </footer>
 
   <script type="module" src="index.js"></script>
 </body>
+
 </html>
