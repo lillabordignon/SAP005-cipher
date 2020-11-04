@@ -11,35 +11,29 @@
 
   <header id="header">
     <div>
-      <h1>Segura</h1>
-    </div>
-    <div class="navbar">
-      <ul>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
+      <img src="logo.png" alt="Mais Segura">
     </div>
   </header>
-  <section id="container">
-    <div class="container_info">
-      <div class="container_info--left">
+  <main id="container">
+    <section class="container_info">
+      <article class="container_info--left">
         <label class="container_label" for="">Digite a mensagem que você deseja codificar ou decodificar</label>
         <textarea class="container_textarea" name="" id="message" placeholder="Digite sua mensagem"></textarea>
-      </div>
-      <div class="container_info--right">
+      </article>
+      <!-- <article class="container_info--right">
         <label class="container_label" for="">Resultado</label>
         <textarea class="container_textarea" name="" id="result"></textarea>
-      </div>
-    </div>
-    <label class="container_label" for="">Digite a chave de deslocamento</label>
+      </article> -->
+    </section>
+    <label class="container_label" for="">Digite o número do deslocamento</label>
     <input type="number" name="" id="offset">
-    <div>
+    <section>
       <button class="btn_container" type="submit" id="btnEncode">Cifrar</button>
       <button class="btn_container" type="submit" id="btnDecode">Decifrar</button>
       <button class="btn_container" type="reset" id="btnReset">Limpar</button>
-    </div>
-  </section>
-  <footer>
+    </section>
+  </main>
+  <footer class="footer">
     <p class="copy">&copy; <a href="https://github.com/lillabordignon/" target="_blank">Lirian Bordignon</a></p>
   </footer>
 
