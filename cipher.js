@@ -1,30 +1,39 @@
-const encodeOrDecode = (offset, message, num) => {
-    let alphabet = 26; 
-    let firstLetterUpperCase = 65;
-    let lastLetterUpperCase = 90;
-    let firstLetterLowerCase = 97;
-    let lastLetterLowerCase = 122;
+const encodeAndDecode = (offset, message, lenghtAlphabet) => {
+    const alphabet = 26; 
+    const firstLetterUpperCase = 65;
+    const lastLetterUpperCase = 90;
+    const firstLetterLowerCase = 97;
+    const lastLetterLowerCase = 122;
+    const elementSpace = 32;
+    const validateMsg = /^[a-zA-Z ]+$/;
     let result = '';
     let convertString;
-    let elSpace = 32;
     let displacement;
+
+    if(!message.match(validateMsg)){
+        throw new Error('Mensagem inválida! Digite apenas texto');
+    }
+
+    if (offset === null){
+        throw new Error('Digite apenas números');
+    }
 
     for (let i = 0; i < message.length; i++){
 
         let asciiNum = message.charCodeAt(i);
 
-        if (asciiNum === elSpace) {
-            convertString = String.fromCharCode(elSpace);
+        if (asciiNum === elementSpace) {
+            convertString = String.fromCharCode(elementSpace);
             result += convertString;
         }else{
 
             if (asciiNum >= firstLetterUpperCase && asciiNum <= lastLetterUpperCase) {    
-                displacement = ((asciiNum - (firstLetterUpperCase + num) + offset) % alphabet) + firstLetterUpperCase + num;
+                displacement = ((asciiNum - (firstLetterUpperCase + lenghtAlphabet) + offset) % alphabet) + firstLetterUpperCase + lenghtAlphabet;
                 convertString = String.fromCharCode(displacement);
                 result += convertString;
     
             } else if(asciiNum >= firstLetterLowerCase && asciiNum <= lastLetterLowerCase){
-                displacement = ((asciiNum - (firstLetterLowerCase + num) + offset) % alphabet) + firstLetterLowerCase + num;
+                displacement = ((asciiNum - (firstLetterLowerCase + lenghtAlphabet) + offset) % alphabet) + firstLetterLowerCase + lenghtAlphabet;
                 convertString = String.fromCharCode(displacement);
                 result += convertString;
             }
@@ -35,6 +44,13 @@ const encodeOrDecode = (offset, message, num) => {
     return result;
 }
 
-const cipher = {encodeOrDecode};
+const cipher = {
+    encode: function (offset, message){
+        return encodeAndDecode (offset, message, 0)
+    },
+    decode: function(offset, message){
+        return encodeAndDecode (-offset, message, 25)
+    }
+};
 
 export default cipher;

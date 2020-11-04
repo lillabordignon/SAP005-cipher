@@ -9,13 +9,13 @@ const encode = () => {
     let valOffSet = elOffSet.value;
     let offSet = Number.parseInt(valOffSet);
 
-    let validateMsg = /^[a-zA-Z ]+$/;
+    const validateMsg = /^[a-zA-Z ]+$/;
 
     if (!message.match(validateMsg)) {
         alert('Mensagem inválida! Digite apenas texto');
     }else{
-        let resultEncode = cipher.encodeOrDecode(offSet, message, 0);
-        result.value = resultEncode;
+        let resultEncode = cipher.encode(offSet, message);
+        elMessage.value = resultEncode;
     }
 
 }
@@ -24,8 +24,8 @@ const decode = () => {
     let message = elMessage.value;
     let valOffSet = elOffSet.value;
     let offSet = Number.parseInt(valOffSet);
-    let resultDecode = cipher.encodeOrDecode(-offSet, message, 25);
-    result.value = resultDecode;
+    let resultDecode = cipher.decode(offSet, message);
+    elMessage.value = resultDecode;
 }
 
 const reset = () => {
