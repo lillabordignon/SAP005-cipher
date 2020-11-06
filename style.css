@@ -7,19 +7,26 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+
+}
+
+input,
+textarea,
+button {
+  outline: none;
 }
 
 #header {
   text-align: center;
-  background-color: #F9C4BC;
+  background-color: #ffd5ce;
   padding-top: 6px;
-  margin-bottom: 50px;
+  margin-bottom: -250px;
+  border-bottom: 4px solid #F9C4BC;
+  min-height: 400px;
 }
 
-#header h1 {
-  text-transform: uppercase;
-  color: #A6375F;
-  margin-left: 30px;
+#header img {
+  padding-top: 25px;
 }
 
 #container {
@@ -28,8 +35,23 @@ body {
   align-items: center;
   width: 800px;
   background-color: #F9C4BC;
-  margin: 0 auto;
-  border-radius: 20px;
+  margin: 20px auto 0;
+  border-radius: 25px;
+  border-bottom: 6px solid #eab2ab;
+}
+
+.container_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.container_label {
+  text-align: center;
+  color: #495766;
+  font-weight: 600;
+  margin-top: 30px;
 }
 
 .container_textarea {
@@ -37,57 +59,43 @@ body {
   height: 250px;
   resize: none;
   border-radius: 10px;
-  border: 1px solid#fabfb6;
-  padding: 5px 0 0 5px;
+  border: 1px solid#fcbdb4;
+  padding: 25px;
   font-family: 'Nunito', sans-serif;
+  margin-top: 15px;
 }
 
-.container_info {
-  display: flex;
-}
-
-.container_info--left,
-.container_info--right {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  justify-content: flex-end;
-  padding: 20px;
-}
-
-.container_label {
-  text-align: center;
-  margin: 20px 0;
-  color: #495766;
-  font-weight: 600;
-}
-
-input {
+.container_input {
   width: 150px;
-  padding: 8px 0;
+  padding: 12px 20px;
   border: 1px solid #616060;
   border-radius: 5px;
-  border: 1px solid#F9C4BC;
+  border: 1px solid#fcbdb4;
+  margin-top: 15px;
 }
 
 .btn_container {
   width: 100px;
   padding: 8px 0;
-  margin: 30px 8px;
+  margin: 35px 8px;
   border-radius: 5px;
-  border: 1px solid #a8335e;
+  border: 1px solid #a7345c;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: #A6375F;
+  background-color: #a6385f;
   color: #fff;
   font-weight: 600;
   font-family: 'Nunito', sans-serif;
   letter-spacing: 1px;
+  transition: all 0.2s ease-in;
 }
 
 .btn_container:hover {
-  background-color: #f964b2;
-  border: 1px solid #fd5aae;
+  background-color: #FFD5CE;
+  color: #a7345c;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #a7345c;
 }
 
 .footer {
@@ -106,6 +114,7 @@ input {
   text-decoration: none;
   color: #F9C4BC;
   font-size: 14px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .footer a:hover {

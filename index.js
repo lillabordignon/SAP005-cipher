@@ -1,22 +1,15 @@
 import cipher from './cipher.js';
 
-let elMessage = document.querySelector('#message');
-let elOffSet = document.querySelector('#offset');
-let result = document.querySelector('#result');
+
+let elMessage = document.querySelector('.container_textarea');
+let elOffSet = document.querySelector('.container_input');
 
 const encode = () => {
     let message = elMessage.value;
     let valOffSet = elOffSet.value;
     let offSet = Number.parseInt(valOffSet);
-
-    const validateMsg = /^[a-zA-Z ]+$/;
-
-    if (!message.match(validateMsg)) {
-        alert('Mensagem inválida! Digite apenas texto');
-    }else{
-        let resultEncode = cipher.encode(offSet, message);
+    let resultEncode = cipher.encode(offSet, message);
         elMessage.value = resultEncode;
-    }
 
 }
 
@@ -29,9 +22,8 @@ const decode = () => {
 }
 
 const reset = () => {
-    document.querySelector('#message').value = '';
-    document.querySelector('#result').value = '';
-    document.querySelector('#offset').value = '';
+    document.querySelector('.container_textarea').value = '';
+    document.querySelector('.container_input').value = '';
 
 }
 
