@@ -1,13 +1,13 @@
 # + Segura
 
-Acesse a página clicando[]
+Acesse a página clicando[aqui](https://lillabordignon.github.io/SAP005-cipher/)
 
 ## Índice
 
-* [1. Definição do produto]
-* [2. Interface do produto](
-* [3. Metodo utilizado no projeto]
-* [4. Especificações técnicas do projeto]
+* 1. Definição do produto
+* 2. Interface do produto
+* 3. Metodo utilizado no projeto
+* 4. Especificações técnicas do projeto
 
 ***
 
@@ -26,7 +26,7 @@ A interface permite ao usuário:
 * Clicar no botão decifrar obter o resultado da mensagem decifrada.
 * Clicar no botão limpar para limpar o resultado da tela.
 
-![](/src/img/telaProjeto.jpg)
+![](src/img/telaProjeto.jpg)
 
 ## 3. Metodo utilizado no projeto
 
