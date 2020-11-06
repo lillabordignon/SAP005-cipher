@@ -3,30 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Cipher</title>
+  <title>+ Segura</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header id="header">
-    <div>
-      <img src="logo.png" alt="Mais Segura">
-    </div>
+    <img src="./img/logo.png" alt="+ Segura">
   </header>
   <main id="container">
     <section class="container_info">
-      <article class="container_info--left">
-        <label class="container_label" for="">Digite a mensagem que você deseja codificar ou decodificar</label>
-        <textarea class="container_textarea" name="" id="message" placeholder="Digite sua mensagem"></textarea>
-      </article>
-      <!-- <article class="container_info--right">
-        <label class="container_label" for="">Resultado</label>
-        <textarea class="container_textarea" name="" id="result"></textarea>
-      </article> -->
+      <label class="container_label" for="">Digite a mensagem que você deseja cifrar, ou decifrar</label>
+      <textarea class="container_textarea" placeholder="Digite sua mensagem"></textarea>
+      <label class="container_label" for="">Digite o número do deslocamento</label>
+      <input class="container_input" type="number" placeholder="Digite o deslocamento" min="0" max="25" value="1">
     </section>
-    <label class="container_label" for="">Digite o número do deslocamento</label>
-    <input type="number" name="" id="offset">
     <section>
       <button class="btn_container" type="submit" id="btnEncode">Cifrar</button>
       <button class="btn_container" type="submit" id="btnDecode">Decifrar</button>
