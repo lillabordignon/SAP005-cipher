@@ -26,7 +26,7 @@ A interface permite ao usuário:
 * Clicar no botão decifrar obter o resultado da mensagem decifrada.
 * Clicar no botão limpar para limpar o resultado da tela.
 
-![](/src/img/telaProjeto.JPG)
+![](/src/img/telaProjeto.jpg)
 
 ## 3. Metodo utilizado no projeto
 
