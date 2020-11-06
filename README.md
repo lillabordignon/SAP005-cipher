@@ -4,10 +4,10 @@ Acesse a página clicando [aqui](https://lillabordignon.github.io/SAP005-cipher/
 
 ## Índice
 
-* [1. Definição do produto]
-* [2. Interface do produto]
-* [3. Metodo utilizado no projeto]
-* [4. Especificações técnicas do projeto]
+1. Definição do produto
+2. Interface do produto
+3. Metodo utilizado no projeto
+4. Especificações técnicas do projeto
 
 ***
 
@@ -55,7 +55,7 @@ com facilidade e não oferecem muita segurança na comunição, mas a cifra de C
 muitas vezes pode fazer parte de um sistema mais complexo de criptografia, como
 a cifra de Vigenère, e tem aplicação no sistema ROT13.
 
-### Especificações técnicas do projeto
+## 4. Especificações técnicas do projeto
 
 Para o desenvolvimento do projeto foram utilizados:
 
